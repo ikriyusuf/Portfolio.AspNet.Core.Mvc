@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Education>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitim Bilgileri</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-black text-center text-white-800 mb-8">EĞİTİM BİLGİLERİM</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            @foreach (var degree in Model)
+            {
+                <div class="degree-card bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800">@degree.Degree</h2>
+                    <p class="text-gray-600 mt-2">@degree.SchoolName</p>
+                    <div class="mt-4">
+                        <p class="text-gray-500">
+                            <span class="font-medium">Başlangıç Tarihi:</span>
+                            @degree.StartDate.ToString("MMM yyyy", new System.Globalization.CultureInfo("tr-TR"))
+                        </p>
+                        <p class="text-gray-500">
+                            <span class="font-medium">Bitiş Tarihi:</span>
+                            @(degree.EndDate.HasValue ? degree.EndDate.Value.ToString("MMM yyyy", new System.Globalization.CultureInfo("tr-TR")) : "Şu Anda")
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

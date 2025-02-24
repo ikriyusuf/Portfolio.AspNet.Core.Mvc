@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Certificate>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-gray-100">
+    <div class="container">
+        <h2 class="text-center mb-5">Sertifikalarım</h2>
+
+        <div class="row">
+            @foreach (var certificate in Model)
+            {
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="certificate-card">
+                        <i class="fas fa-certificate certificate-icon"></i>
+                        <div class="institution-name">@certificate.Institution</div>
+                        <h3 class="certificate-title">@certificate.Name</h3>
+                        <div class="certificate-date">
+                            <i class="far fa-calendar-alt me-2"></i>
+                            @certificate.Date.ToString("MMMM yyyy")
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="text-center text-muted py-5">
+                <h4>Henüz sertifika eklenmemiş</h4>
+            </div>
+        }
+    </div>
+</body>
+</html>
