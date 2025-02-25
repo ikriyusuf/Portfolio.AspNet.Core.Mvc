@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Services.ModelsManager
 {
-   public class ProjectManager : IProjectService
+    public class ProjectManager : IProjectService
     {
         private readonly IRepositoryManager _manager;
 
@@ -25,5 +25,24 @@ namespace Services.ModelsManager
         }
 
         public IEnumerable<Project> GetAllProject(bool trackChanges) => _manager.Project.GetAllProject(trackChanges);
+
+        public Project? GetOneProject(int id, bool trackChanges)
+        {
+            var project = _manager.Project.GetOneProject(id, trackChanges);
+            if (project is null)
+            {
+                throw new Exception("Project is not found!!");
+            }
+            return project;
+        }
+
+        public void UpdateProject(Project project)
+        {
+            var entity = _manager.Project.GetOneProject(project.Id, true);
+            entity.Title = project.Title;
+            entity.Description = project.Description;
+            entity.Technologies = project.Technologies;
+            _manager.Save();
+        }
     }
 }

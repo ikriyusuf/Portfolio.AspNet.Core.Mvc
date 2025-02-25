@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B05F0D5-4B61-4449-9245-38CC66B7526C}|Portfolio\\Portfolio.csproj|c:\\users\\yusuf\\source\\repos\\portfolio\\portfolio\\areas\\admin\\controllers\\adminhomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B05F0D5-4B61-4449-9245-38CC66B7526C}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\areas\\admin\\controllers\\adminhomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B05F0D5-4B61-4449-9245-38CC66B7526C}|Portfolio\\Portfolio.csproj|c:\\users\\yusuf\\source\\repos\\portfolio\\portfolio\\areas\\admin\\views\\adminhome\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B05F0D5-4B61-4449-9245-38CC66B7526C}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\areas\\admin\\views\\adminhome\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,14 +55,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminHomeController.cs",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\Portfolio\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "RelativeDocumentMoniker": "Portfolio\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\Portfolio\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "RelativeToolTip": "Portfolio\\Areas\\Admin\\Controllers\\AdminHomeController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBwAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T13:19:00.367Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\Portfolio\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "RelativeDocumentMoniker": "Portfolio\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\Portfolio\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "RelativeToolTip": "Portfolio\\Areas\\Admin\\Views\\AdminHome\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T17:44:03.109Z",
               "EditorCaption": ""
             }
           ]

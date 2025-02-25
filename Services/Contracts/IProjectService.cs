@@ -10,6 +10,8 @@ namespace Services.Contracts
    public interface IProjectService
     {
         IEnumerable<Project> GetAllProject(bool trackChanges);
+        Project? GetOneProject(int id, bool trackChanges);
         void CreateProject(Project project);
+        void UpdateProject(Project project); 
     }
 }

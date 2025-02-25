@@ -37,5 +37,22 @@ namespace Portfolio.Areas.Admin.Controllers
             }
             return View();
         }
+
+        public IActionResult Update([FromRoute(Name = "id")] int id)
+        {
+            var entity = _manager.ProjectService.GetOneProject(id, false);
+            return View(entity);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update([FromForm] Project project)
+        { // 
+            if (ModelState.IsValid)
+            {
+                _manager.ProjectService.UpdateProject(project);
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 }

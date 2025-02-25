@@ -10,6 +10,8 @@ namespace Repositories.Contracts
     public interface IProjectRepository : IReposityoryBase<Project>
     {
         IQueryable<Project> GetAllProject(bool trackChanges);
+        Project? GetOneProject(int id, bool trackChanges);
         void CreateProject(Project project);
+        void UpdateProject(Project project);
     }
 }
