@@ -10,5 +10,6 @@ namespace Repositories.Contracts
     public interface IProjectRepository : IReposityoryBase<Project>
     {
         IQueryable<Project> GetAllProject(bool trackChanges);
+        void CreateProject(Project project);
     }
 }

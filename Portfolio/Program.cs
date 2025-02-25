@@ -10,12 +10,10 @@ using Services.ModelsManager;
 using Portfolio.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-// Ioc KAYDI SQL
-builder.Services.ConfigureDbContext(builder.Configuration);
-// IoC KAYDI REPOSİTORY
-builder.Services.ConfigureRepository();
-// IoC KAYDI SERVİCES
-builder.Services.ConfigureService();
+
+builder.Services.ConfigureDbContext(builder.Configuration); // Ioc KAYDI SQL
+builder.Services.ConfigureRepository(); // IoC KAYDI REPOSİTORY
+builder.Services.ConfigureService(); // IoC KAYDI SERVİCES
 
 // Add services to the container. 
 builder.Services.AddControllersWithViews();
@@ -33,8 +31,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
+// Infrastructure.Extensions
+app.MapCustomDefaultRoute();
+app.MapCustomAdminRoute();
 app.Run();

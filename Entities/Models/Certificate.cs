@@ -9,8 +9,8 @@ namespace Entities.Models
     public class Certificate
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Institution { get; set; }
+        public string? Name { get; set; }
+        public string? Institution { get; set; }
         public DateTime Date { get; set; }
     }
 }

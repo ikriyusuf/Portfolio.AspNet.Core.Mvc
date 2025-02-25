@@ -9,5 +9,6 @@ namespace Repositories.Contracts
    public interface IReposityoryBase<T>
     {
         IQueryable<T> FindAll(bool trackChanges);
+        void Create(T entity);
     }
 }

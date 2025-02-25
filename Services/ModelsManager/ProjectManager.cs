@@ -18,7 +18,12 @@ namespace Services.ModelsManager
             _manager = manager;
         }
 
-        public IEnumerable<Project> GetAllProject(bool trackChanges) => _manager.Project.GetAllProject(trackChanges);
+        public void CreateProject(Project project)
+        {
+            _manager.Project.CreateProject(project);
+            _manager.Save();
+        }
 
+        public IEnumerable<Project> GetAllProject(bool trackChanges) => _manager.Project.GetAllProject(trackChanges);
     }
 }

@@ -15,7 +15,8 @@ namespace Repositories.ModelsRepository
         {
         }
 
-        public IQueryable<Project> GetAllProject(bool trackChanges) => FindAll(trackChanges);
+        public void CreateProject(Project project) => Create(project);
 
+        public IQueryable<Project> GetAllProject(bool trackChanges) => FindAll(trackChanges);
     }
 }
