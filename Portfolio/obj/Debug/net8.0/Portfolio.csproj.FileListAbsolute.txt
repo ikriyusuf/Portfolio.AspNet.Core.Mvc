@@ -176,3 +176,4 @@ C:\Users\yusuf\source\repos\Portfolio\Portfolio\bin\Debug\net8.0\Repositories.pd
 C:\Users\yusuf\source\repos\Portfolio\Portfolio\bin\Debug\net8.0\Services.dll
 C:\Users\yusuf\source\repos\Portfolio\Portfolio\bin\Debug\net8.0\Services.pdb
 C:\Users\yusuf\source\repos\Portfolio\Portfolio\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\yusuf\source\repos\Portfolio\Portfolio\obj\Debug\net8.0\Portfolio.sourcelink.json
