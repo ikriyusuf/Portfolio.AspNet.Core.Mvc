@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.Dtos;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 
@@ -37,19 +38,19 @@ namespace Portfolio.Areas.Admin.Controllers
             }
             return View();
         }
-
+        [HttpGet]
         public IActionResult Update([FromRoute(Name = "id")] int id)
         {
-            var entity = _manager.ProjectService.GetOneProject(id, false);
-            return View(entity);
+            var projectUpdateDto = _manager.ProjectService.GetOneProjectForUpdate(id, false);
+            return View(projectUpdateDto);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update([FromForm] Project project)
+        public IActionResult Update([FromForm] ProjectUpdateDto projectUpdateDto)
         { // 
             if (ModelState.IsValid)
             {
-                _manager.ProjectService.UpdateProject(project);
+                _manager.ProjectService.UpdateProject(projectUpdateDto);
                 return RedirectToAction("Index");
             }
             return View();

@@ -24,6 +24,8 @@ namespace Repositories.ModelsRepository
         public Project? GetOneProject(int id, bool trackChanges) => FindByCondition(p => p.Id.Equals(id), trackChanges);
 
         public void UpdateProject(Project project) => Update(project);
-        
+
+        public void UpdateOneProject(Project project) => Update(project);
+
     }
 }

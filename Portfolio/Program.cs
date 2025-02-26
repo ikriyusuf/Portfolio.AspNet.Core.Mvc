@@ -15,6 +15,8 @@ builder.Services.ConfigureDbContext(builder.Configuration); // Ioc KAYDI SQL
 builder.Services.ConfigureRepository(); // IoC KAYDI REPOSİTORY
 builder.Services.ConfigureService(); // IoC KAYDI SERVİCES
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 // Add services to the container. 
 builder.Services.AddControllersWithViews();
 

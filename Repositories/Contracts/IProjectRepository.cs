@@ -14,5 +14,6 @@ namespace Repositories.Contracts
         void CreateProject(Project project);
         void UpdateProject(Project project);
         void RemoveProject(Project project);
+        void UpdateOneProject(Project project);
     }
 }
