@@ -17,6 +17,8 @@ namespace Repositories.ModelsRepository
 
         public void CreateProject(Project project) => Create(project);
 
+        public void RemoveProject(Project project) => Remove(project);
+
         public IQueryable<Project> GetAllProject(bool trackChanges) => FindAll(trackChanges);
 
         public Project? GetOneProject(int id, bool trackChanges) => FindByCondition(p => p.Id.Equals(id), trackChanges);

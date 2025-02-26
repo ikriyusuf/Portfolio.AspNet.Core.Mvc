@@ -36,13 +36,30 @@ namespace Services.ModelsManager
             return project;
         }
 
+        public void RemoveProject(int id)
+        {
+            var entity = _manager.Project.GetOneProject(id, false);
+            if (entity is not null)
+            {
+                _manager.Project.RemoveProject(entity);
+                _manager.Save();
+            }
+        }
+
         public void UpdateProject(Project project)
         {
             var entity = _manager.Project.GetOneProject(project.Id, true);
-            entity.Title = project.Title;
-            entity.Description = project.Description;
-            entity.Technologies = project.Technologies;
-            _manager.Save();
+            if (entity is not null)
+            {
+                entity.Title = project.Title;
+                entity.Description = project.Description;
+                entity.Technologies = project.Technologies;
+                _manager.Save();
+            }
+            else
+            {
+                throw new Exception("Project to update is not found!!");
+            }
         }
     }
 }

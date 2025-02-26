@@ -13,5 +13,6 @@ namespace Repositories.Contracts
         Project? GetOneProject(int id, bool trackChanges);
         void CreateProject(Project project);
         void UpdateProject(Project project);
+        void RemoveProject(Project project);
     }
 }

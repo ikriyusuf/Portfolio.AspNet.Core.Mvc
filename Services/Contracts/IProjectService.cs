@@ -12,6 +12,7 @@ namespace Services.Contracts
         IEnumerable<Project> GetAllProject(bool trackChanges);
         Project? GetOneProject(int id, bool trackChanges);
         void CreateProject(Project project);
-        void UpdateProject(Project project); 
+        void UpdateProject(Project project);
+        void RemoveProject(int id);
     }
 }

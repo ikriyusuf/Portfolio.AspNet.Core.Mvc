@@ -54,5 +54,12 @@ namespace Portfolio.Areas.Admin.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Delete([FromRoute(Name = "id")] int id)
+        {
+            _manager.ProjectService.RemoveProject(id);
+            return RedirectToAction("Index");
+        }
     }
 }
