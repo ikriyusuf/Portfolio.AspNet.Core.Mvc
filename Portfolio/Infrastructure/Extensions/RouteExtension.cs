@@ -7,7 +7,7 @@
             endpoints.MapAreaControllerRoute(
                 name: "Admin",
                 areaName: "Admin",
-                pattern: "{controller=AdminHome}/{action=Index}/{id?}"
+                pattern: "{controller=Dashboard}/{action=Index}/{id?}"
             );
             return endpoints;
         }

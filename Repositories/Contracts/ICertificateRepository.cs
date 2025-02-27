@@ -9,6 +9,10 @@ namespace Repositories.Contracts
 {
    public interface ICertificateRepository : IReposityoryBase<Certificate>
     {
+        void CreateCertificate(Certificate certificate);
+        void DeleteCertificate(Certificate certificate);
         IQueryable<Certificate> GetAllCertificate(bool trackChanges);
+        Certificate? GetOneCertificate(int id, bool trackChanges);
+        void UpdateOneCertificate(Certificate certificate);
     }
 }

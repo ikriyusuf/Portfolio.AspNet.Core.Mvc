@@ -14,7 +14,14 @@ namespace Repositories.ModelsRepository
         public CertificateRepository(ApplicationDbContext context) : base(context)
         {
         }
+        public void CreateCertificate(Certificate certificate) => Create(certificate);
+
+        public void DeleteCertificate(Certificate certificate) => Remove(certificate);
 
         public IQueryable<Certificate> GetAllCertificate(bool trackChanges) => FindAll(trackChanges);
+
+        public Certificate? GetOneCertificate(int id, bool trackChanges) => FindByCondition(c => c.Id.Equals(id),trackChanges);
+
+        public void UpdateOneCertificate(Certificate certificate) => Update(certificate);
     }
 }

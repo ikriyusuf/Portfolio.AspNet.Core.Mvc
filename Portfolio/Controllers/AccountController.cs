@@ -31,22 +31,18 @@ namespace Portfolio.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Attempt to sign in the user
-                var result = await _signInManager.PasswordSignInAsync(loginModel.Name, loginModel.Password, false, false);
-
-                if (result.Succeeded)
+                IdentityUser user = await _userManager.FindByNameAsync(loginModel.Name);
+                if (user is not null)
                 {
-                    return RedirectToAction("Index", "Dashboard");
+                    await _signInManager.SignOutAsync();
+                    if ((await _signInManager.PasswordSignInAsync(user, loginModel.Password, false, false)).Succeeded)
+                    {
+                        return RedirectToAction("Index", "Dashboard");
+                    }
                 }
-                else
-                {
-                    // Add an error to the model if login failed
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                }
+                ModelState.AddModelError("Error", "Invalid username or password.");
             }
-
-            // If we got this far, something failed, redisplay the form with error messages
-            return View(loginModel);
+            return View();
         }
 
         // POST: Account/Logout

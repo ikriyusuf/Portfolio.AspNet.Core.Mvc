@@ -35,10 +35,12 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-app.UseAuthorization();
+
 // Infrastructure.Extensions
 app.MapCustomDefaultRoute();
 app.MapCustomAdminRoute();
+app.UseAuthentication();
+app.UseAuthorization();
 app.ConfigureLocalization();
 app.ConfigureDefaultAdminUser();
 
