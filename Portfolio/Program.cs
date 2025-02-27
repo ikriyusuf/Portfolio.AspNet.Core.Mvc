@@ -12,8 +12,10 @@ using Portfolio.Infrastructure.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ConfigureDbContext(builder.Configuration); // Ioc KAYDI SQL
+builder.Services.ConfigureIdentity();
 builder.Services.ConfigureRepository(); // IoC KAYDI REPOSİTORY
 builder.Services.ConfigureService(); // IoC KAYDI SERVİCES
+builder.Services.ConfigureRouting(); // Url
 
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -29,6 +31,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
@@ -36,4 +39,7 @@ app.UseAuthorization();
 // Infrastructure.Extensions
 app.MapCustomDefaultRoute();
 app.MapCustomAdminRoute();
+app.ConfigureLocalization();
+app.ConfigureDefaultAdminUser();
+
 app.Run();

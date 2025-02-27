@@ -6,11 +6,11 @@ using Services.Contracts;
 namespace Portfolio.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class AdminHomeController : Controller
+    public class DashboardController : Controller
     {
         private readonly IServiceManager _manager;
 
-        public AdminHomeController(IServiceManager manager)
+        public DashboardController(IServiceManager manager)
         {
             _manager = manager;
         }

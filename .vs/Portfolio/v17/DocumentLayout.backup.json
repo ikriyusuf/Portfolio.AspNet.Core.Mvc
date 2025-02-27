@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4B05F0D5-4B61-4449-9245-38CC66B7526C}|Portfolio\\Portfolio.csproj|c:\\users\\yusuf\\source\\repos\\portfolio\\portfolio\\areas\\admin\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4B05F0D5-4B61-4449-9245-38CC66B7526C}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\areas\\admin\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,19 +46,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Navbar.cshtml",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\Portfolio\\Areas\\Admin\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeDocumentMoniker": "Portfolio\\Areas\\Admin\\Views\\Shared\\_Navbar.cshtml",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\Portfolio\\Portfolio\\Areas\\Admin\\Views\\Shared\\_Navbar.cshtml",
-              "RelativeToolTip": "Portfolio\\Areas\\Admin\\Views\\Shared\\_Navbar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-26T11:24:51.12Z",
-              "EditorCaption": ""
             }
           ]
         }
