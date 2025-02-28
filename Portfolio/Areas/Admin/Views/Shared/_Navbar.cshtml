@@ -8,13 +8,30 @@
         <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="navbarNavAltMarkup">
             <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" asp-area="" asp-controller="AdminProject" asp-action="Index">Projeler</a>
+                    <a class="nav-link text-white" aria-current="page" asp-area="" asp-controller="AdminProject" asp-action="Index">
+                        Projeler
+                        <span class="badge bg-secondary">
+                            @await Component.InvokeAsync("ProjectCount")
+                        </span>
+                    </a>
                 </li>
                 <li>
-                    <a class="nav-link text-white" aria-current="page" asp-area="" asp-controller="AdminCertificate" asp-action="Index">Sertifikalar</a>
+                    <a class="nav-link text-white" aria-current="page" asp-area="" asp-controller="AdminCertificate" asp-action="Index">
+                        Sertifikalar
+                        <span class="badge bg-secondary">
+                            @await Component.InvokeAsync("CertificateCount")
+                        </span>
+
+                    </a>
                 </li>
                 <li>
-                    <a class="nav-link text-white" aria-current="page" asp-area="" asp-controller="AdminExperience" asp-action="Index">Deneyim</a>
+                    <a class="nav-link text-white" aria-current="page" asp-area="" asp-controller="AdminExperience" asp-action="Index">
+                        Deneyim
+                        <span class="badge bg-secondary">
+                            @await Component.InvokeAsync("ExperienceCount")
+                        </span>
+
+                    </a>
                 </li>
             </ul>
         </div>
