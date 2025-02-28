@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Experience>
+
+@{
+	Layout = "_Layout";
+}
+
+<div class="text-center my-4">
+	<div class="display-6 text-primary">Deneyim Listesi</div>
+</div>
+
+
+<div class="text-center">
+	<div class="d-flex justify-content-end my-3">
+		<div class="btn-group">
+			<a class="btn btn-success" asp-controller="AdminExperience" asp-action="Create">
+				<i class="fa fa-plus"></i> Yeni Deneyim Ekle
+			</a>
+			<a class="btn btn-outline-primary" asp-area="" asp-controller="Experience" asp-action="Index" target="_blank">
+				<i class="fa fa-globe"></i> Web'e Git
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+		<table class="table table-striped table-bordered table-sm">
+			<thead class="bg-info text-white">
+				<tr>
+					<th>ID</th>
+					<th>Pozisyon</th>
+					<th>Şirket</th>
+					<th>Başlangıç Tarihi</th>
+					<th>Bitiş Tarihi</th>
+					<th>Sorumluluklar</th>
+					<th>İşlemler</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				@foreach (var project in Model)
+				{
+					<tr class="table-light">
+						<td class="text-center">@project.Id</td>
+						<td>@project.JobTitle</td>
+						<td>@project.Company</td>
+						<td>@project.StartDate.ToString("dd MMM yyyy")</td>
+						<td>@(project.EndDate?.ToString("dd MMM yyyy") ?? "Devam Ediyor")</td>
+						<td>@project.Responsibilities</td>
+						<td>
+							<div class="btn-group">
+								<a data-toggle="tooltip" data-placement="top" title="Düzenle" class="btn btn-warning"
+								   asp-action="Update" asp-route-id="@project.Id">
+									<i class="fa fa-edit"></i>
+								</a>
+								<a data-toggle="tooltip" data-placement="top" title="Sil" class="btn btn-danger"
+								   asp-action="Delete" asp-route-id="@project.Id">
+									<i class="fa fa-trash"></i>
+								</a>
+							</div>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+

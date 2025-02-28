@@ -9,6 +9,10 @@ namespace Repositories.Contracts
 {
     public interface IExperienceRepository : IReposityoryBase<Experience>
     {
+        void CreateExperience(Experience experience);
+        void DeleteOneExperience(Experience experience);
         IQueryable<Experience> GetAllExperience(bool trackChanges);
+        Experience? GetOneExperience(int id,bool trackChanges);
+        void UpdateOneExperience(Experience experience);
     }
 }

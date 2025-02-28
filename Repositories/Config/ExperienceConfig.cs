@@ -39,7 +39,7 @@ namespace Repositories.Config
                     Id = 3,
                     JobTitle = "Uzun Dönem Yazılım Stajyeri",
                     Company = "KASKİ - Kayseri Büyükşehir Belediyesi",
-                    StartDate = new DateTime(2024, 7, 25),
+                    StartDate = new DateTime(2025, 2, 10),
                     EndDate = null,
                     Responsibilities = "KASKİ bünyesinde uzun dönem stajımı yürütmekteyim."
                 }

@@ -10,6 +10,7 @@ namespace Portfolio.Infrastructure.Mapping
         {
             CreateMap<ProjectUpdateDto, Project>().ReverseMap();
             CreateMap<CertificateUpdateDto, Certificate>().ReverseMap();
+            CreateMap<ExperienceUpdateDto, Experience>().ReverseMap();
         }
     }
 }

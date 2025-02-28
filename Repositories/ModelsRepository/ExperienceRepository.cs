@@ -15,7 +15,14 @@ namespace Repositories.ModelsRepository
         {
         }
 
+        public void CreateExperience(Experience experience) => Create(experience);
+
+        public void DeleteOneExperience(Experience experience) => Remove(experience);
+
         public IQueryable<Experience> GetAllExperience(bool trackChanges) => FindAll(trackChanges);
 
+        public Experience? GetOneExperience(int id, bool trackChanges) => FindByCondition(e => e.Id.Equals(id), trackChanges);
+
+        public void UpdateOneExperience(Experience experience) => Update(experience);
     }
 }

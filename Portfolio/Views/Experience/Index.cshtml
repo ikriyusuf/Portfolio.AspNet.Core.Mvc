@@ -15,8 +15,8 @@
                         <!-- Tarih Aralığı -->
                         <p class="card-text">
                             <i class="fas fa-calendar-alt me-2"></i>
-                            @experience.StartDate.ToString("MMM yyyy") -
-                            @(experience.EndDate.HasValue ? experience.EndDate.Value.ToString("MMM yyyy") : "Şu Anda")
+                            @experience.StartDate.ToString("dd MMM yyyy") -
+                            @(experience.EndDate.HasValue ? experience.EndDate.Value.ToString("dd MMM yyyy") : "Şu Anda")
                         </p>
 
                         <!-- Görevler ve Sorumluluklar -->
