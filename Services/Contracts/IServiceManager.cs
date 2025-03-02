@@ -7,5 +7,6 @@ namespace Services.Contracts
         IExperienceService ExperienceService { get; }
         IEducationService EducationService { get; }
         ICertificateService CertificateService { get; }
+        IContactService ContactService { get; }
     }
 }

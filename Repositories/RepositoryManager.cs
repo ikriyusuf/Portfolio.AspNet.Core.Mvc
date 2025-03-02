@@ -16,9 +16,11 @@ namespace Repositories
         private readonly IExperienceRepository _experienceRepository;
         private readonly IEducationRepository _educationRepository;
         private readonly ICertificateRepository _certificateRepository;
+        private readonly IContactRepository _contactRepository;
         public RepositoryManager(IPersonalRepository personalRepository, ApplicationDbContext context, 
             IProjectRepository projectRepository, IExperienceRepository experienceRepository,
-            IEducationRepository educationRepository, ICertificateRepository certificateRepository)
+            IEducationRepository educationRepository, ICertificateRepository certificateRepository,
+            IContactRepository contactRepository)
         {
             _experienceRepository = experienceRepository;
             _personalRepository = personalRepository;
@@ -26,6 +28,7 @@ namespace Repositories
             _context = context;
             _educationRepository = educationRepository;
             _certificateRepository = certificateRepository;
+            _contactRepository = contactRepository;
         }
 
         public IPersonalRepository Personal => _personalRepository;
@@ -33,6 +36,7 @@ namespace Repositories
         public IExperienceRepository Experience => _experienceRepository;
         public IEducationRepository Education => _educationRepository;
         public ICertificateRepository Certificate => _certificateRepository;
+        public IContactRepository Contact => _contactRepository;
 
         public void Save()
         {

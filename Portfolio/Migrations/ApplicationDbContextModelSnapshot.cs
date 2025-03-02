@@ -109,6 +109,35 @@ namespace Portfolio.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Entities.Models.Contact", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Contacts");
+                });
+
             modelBuilder.Entity("Entities.Models.Education", b =>
                 {
                     b.Property<int>("Id")
@@ -212,7 +241,7 @@ namespace Portfolio.Migrations
                             Company = "KASKİ - Kayseri Büyükşehir Belediyesi",
                             JobTitle = "Uzun Dönem Yazılım Stajyeri",
                             Responsibilities = "KASKİ bünyesinde uzun dönem stajımı yürütmekteyim.",
-                            StartDate = new DateTime(2024, 7, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartDate = new DateTime(2025, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 

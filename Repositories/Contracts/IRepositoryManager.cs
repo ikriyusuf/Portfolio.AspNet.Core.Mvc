@@ -13,6 +13,7 @@ namespace Repositories.Contracts
         IExperienceRepository Experience { get; }
         IEducationRepository Education { get; }
         ICertificateRepository Certificate { get; }
+        IContactRepository Contact { get; }
         void Save();
     }
 }

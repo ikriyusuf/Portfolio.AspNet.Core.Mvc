@@ -1,0 +1,48 @@
+﻿@model Contact
+
+<div class="text-center my-5">
+    <h6 class="display-6">
+        <i class="fa-solid text-white fa-envelope bg-secondary p-3 rounded-5"></i>
+        <br />
+        Contact Us
+    </h6>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div>
+            <div class="text-danger" asp-validation-summary="All"></div>
+        </div>
+        <form method="post" asp-action="SendMessage">
+
+            <div class="form-group my-3">
+                <label asp-for="FullName"></label>
+                <input asp-for="FullName" class="form-control" />
+            </div>
+
+            <div class="form-group my-3">
+                <label asp-for="Email"></label>
+                <input type="email" asp-for="Email" class="form-control" />
+            </div>
+
+            <div class="form-group my-3">
+                <label asp-for="Subject"></label>
+                <input asp-for="Subject" class="form-control" />
+            </div>
+
+            <div class="form-group my-3">
+                <label asp-for="Message"></label>
+                <textarea asp-for="Message" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group my-3 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Gönder
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>

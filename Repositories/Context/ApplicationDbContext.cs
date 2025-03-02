@@ -12,12 +12,12 @@ namespace Repositories.Models
             : base(options)
         {
         }
-
         public DbSet<Personal> Personals { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Education> Educations { get; set; }
         public DbSet<Certificate> Certificates { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

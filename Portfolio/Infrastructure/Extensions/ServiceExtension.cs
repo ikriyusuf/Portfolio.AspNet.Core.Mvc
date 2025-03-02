@@ -43,6 +43,7 @@ namespace Portfolio.Infrastructure.Extensions
             services.AddScoped<IExperienceRepository, ExperienceRepository>();
             services.AddScoped<IEducationRepository, EducationRepository>();
             services.AddScoped<ICertificateRepository, CertificateRepository>();
+            services.AddScoped<IContactRepository, ContactRepository>();
         }
 
         public static void ConfigureService(this IServiceCollection services)
@@ -53,6 +54,7 @@ namespace Portfolio.Infrastructure.Extensions
             services.AddScoped<IExperienceService, ExperienceManager>();
             services.AddScoped<IEducationService, EducationManager>();
             services.AddScoped<ICertificateService, CertificateManager>();
+            services.AddScoped<IContactService, ContactManager>();
         }
 
         public static void ConfigureRouting(this IServiceCollection services)
